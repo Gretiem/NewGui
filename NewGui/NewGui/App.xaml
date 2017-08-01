@@ -11,7 +11,10 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Border Name="Borderset" CornerRadius="5" BorderThickness="1" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
-                            <ContentPresenter Margin="3,0,3,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" RecognizesAccessKey="True"/>
+                            
+                            <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                                <ContentPresenter Margin="3,0,3,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" RecognizesAccessKey="True"/>
+                            </Viewbox>                            
                         </Border>
                         <ControlTemplate.Triggers>
 
@@ -20,5 +23,25 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style x:Key="DarkFlatTabButton" TargetType="{x:Type Button}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="SlateGray"/>
+            
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Name="Borderset" CornerRadius="0" BorderThickness="1" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}">
+                            <ContentPresenter Margin="5,10,20,10" HorizontalAlignment="Left" VerticalAlignment="Bottom" RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
     </Application.Resources>
 </Application>
