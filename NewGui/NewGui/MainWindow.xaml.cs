@@ -42,6 +42,15 @@ namespace NewGui
             btnButtonTest.Background = Brushes.SkyBlue;
             btnButtonTest.BorderBrush = Brushes.Black;
             //MessageBox.Show("click");
+
+            string thisHeight = Application.Current.MainWindow.ActualWidth.ToString();
+            MessageBox.Show(thisHeight);
+        }
+
+        private void getWidth()
+        {
+            string thisWidth = Application.Current.MainWindow.ActualWidth.ToString();
+            
         }
     }
 }
