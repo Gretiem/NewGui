@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="461.765" Width="845.588">
     <Grid>
-        <Button x:Name="btnButtonTest" Style="{StaticResource FlatPic}" Content="Concept" HorizontalAlignment="Left" Margin="284,144,0,0" VerticalAlignment="Top" Width="150" Height="75" Background="DeepSkyBlue" Foreground="White" BorderBrush="Black" MouseEnter="btnButtonTest_MouseEnter" MouseLeave="btnButtonTest_MouseLeave" Click="btnButtonTest_Click"/>
+        <Button x:Name="btnButtonTest" Style="{StaticResource FlatPic}" Content="Concept" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Height="75" Background="DeepSkyBlue" Foreground="White" BorderBrush="Black" MouseEnter="btnButtonTest_MouseEnter" MouseLeave="btnButtonTest_MouseLeave" Click="btnButtonTest_Click"/>
     </Grid>
 </Window>
