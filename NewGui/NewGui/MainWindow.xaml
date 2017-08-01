@@ -1,0 +1,12 @@
+﻿<Window x:Class="NewGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewGui"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="461.765" Width="845.588">
+    <Grid>
+        <Button x:Name="btnButtonTest" Style="{StaticResource FlatPic}" Content="Concept" HorizontalAlignment="Left" Margin="284,144,0,0" VerticalAlignment="Top" Width="150" Height="75" Background="DeepSkyBlue" Foreground="White" BorderBrush="Black" MouseEnter="btnButtonTest_MouseEnter" MouseLeave="btnButtonTest_MouseLeave" Click="btnButtonTest_Click"/>
+    </Grid>
+</Window>
