@@ -20,6 +20,7 @@ namespace NewGui
     /// </summary>
     public partial class MainWindow : Window
     {
+      
         public MainWindow()
         {
             InitializeComponent();
@@ -52,5 +53,12 @@ namespace NewGui
             string thisWidth = Application.Current.MainWindow.ActualWidth.ToString();
             
         }
+
+        private void btnTesting_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("test");
+        }
     }
+
+
 }
