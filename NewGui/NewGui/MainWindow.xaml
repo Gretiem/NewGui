@@ -68,7 +68,9 @@
                         
                     </DockPanel>                    
                 </Button>
-
+                <Rectangle Height="3" Fill="White"/>
+                <local:ImageButton x:Name="imgbutton" NormalImage="Email.jpg" />
+                
 
             </StackPanel>
             
