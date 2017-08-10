@@ -27,6 +27,13 @@ namespace NewGui
         public static readonly DependencyProperty DisabledImageProperty =
             DependencyProperty.Register("DisabledImage", typeof(ImageSource), typeof(ImageButton), new UIPropertyMetadata(null));
 
+        public ImageSource SecondImage
+        {
+            get { return (ImageSource)GetValue(SecondImageProperty);  }
+            set { SetValue(SecondImageProperty, value); }
+        }
+        public static readonly DependencyProperty SecondImageProperty =
+            DependencyProperty.Register("SecondImage", typeof(ImageSource), typeof(ImageButton), new UIPropertyMetadata(null));
 
         public ImageSource NormalImage
         {
@@ -35,6 +42,16 @@ namespace NewGui
         }
         public static readonly DependencyProperty NormalImageProperty =
             DependencyProperty.Register("NormalImage", typeof(ImageSource), typeof(ImageButton), new UIPropertyMetadata(null));
+
+        public String TxtBlockValue
+        {
+            get { return (String)GetValue(TxtBlockValueProperty); }
+            set { SetValue(TxtBlockValueProperty, value); }
+        }
+        public static DependencyProperty TxtBlockValueProperty =
+            DependencyProperty.Register("TxtBlockValue", typeof(String), typeof(ImageButton), new UIPropertyMetadata(null));
+
+
 
         public event RoutedEventHandler Click;
 

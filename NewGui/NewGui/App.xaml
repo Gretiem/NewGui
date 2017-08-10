@@ -42,7 +42,25 @@
             </Setter>
         </Style>
 
-        
+        <Style x:Key="DarkFlatTabButtonT2" TargetType="{x:Type local:ImageButton}">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#FF3A3A3A"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type local:ImageButton}">
+                        <Border Name="Borderset" CornerRadius="0" BorderThickness="1" Background="{TemplateBinding Background}" BorderBrush="#FF3A3A3A">
+                            <ContentPresenter  Margin="1,1,10,1" HorizontalAlignment="Left" VerticalAlignment="Bottom" RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
 
     </Application.Resources>
 </Application>

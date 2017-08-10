@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewGui"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="900">
+        Title="MainWindow" Height="500" Width="900" WindowStyle="None">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -15,30 +15,56 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Button x:Name="btnButtonTest" Style="{StaticResource FlatPic}" Content="Concept" Margin="10" Grid.Column="1" Grid.Row="0"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black" MouseEnter="btnButtonTest_MouseEnter" MouseLeave="btnButtonTest_MouseLeave" Click="btnButtonTest_Click"/>
-        <Button Style="{StaticResource FlatPic}" Content="Concept1" Margin="10" Grid.Column="2" Grid.Row="0"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
-        <Button Style="{StaticResource FlatPic}" Content="Concept1" Margin="10" Grid.Column="3" Grid.Row="0"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black">
-            
-        </Button>
-        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="4" Grid.Row="0"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
-        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="1" Grid.Row="1"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
-        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="2" Grid.Row="1"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
-        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="3" Grid.Row="1"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
-        <Button Style="{StaticResource FlatPic}" Content="Concept2" Margin="10" Grid.Column="4" Grid.Row="1"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
+        <DockPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Background="#FF2D2D30">
+            <StackPanel Orientation="Horizontal" Background="#FF2D2D30" Width="145" HorizontalAlignment="Left">
+                <Label Content="Clear View" Foreground="White" FontSize="14" Visibility="Collapsed"/>
+                <Menu x:Name="mnuBarTopLeft" DockPanel.Dock="Top"  Background="#FF2D2D30" Foreground="White" Width="100" Height="30" Visibility="Visible">
+                    <MenuItem x:Name="mniClear" Header="_Clear View" FontSize="18" Width="100">
+                        
+                    </MenuItem>
+                </Menu>
+                
+            </StackPanel>
+        </DockPanel>
+        <DockPanel  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3">
+            <Label x:Name="lblTitleBarCenter" Background="#FF2D2D30"  MouseLeftButtonDown="lblTitleBarCenter_MouseLeftButtonDown" />
+        </DockPanel>
+
+        <DockPanel HorizontalAlignment="Right" Grid.Row="0" Grid.Column="4">
+            <Menu x:Name="mnuBarTopRight" Width="120" Height="30" Background="#FF2D2D30" FlowDirection="RightToLeft" VerticalAlignment="Center" >
+                <MenuItem x:Name="mnuExit" FontFamily="Marlett" Header="&#x072;" Foreground="White" FontSize="20" Click="mnuExit_Click"/>
+                <MenuItem x:Name="mnuMaximize" FontFamily="Marlett" Header="&#x031;" Foreground="White" FontSize="20" Click="mnuMaximize_Click">
+                    
+                </MenuItem>
+
+
+                <MenuItem x:Name="mnuMinimize" FontFamily="Marlett"  Header="&#x030;" Foreground="White" FontSize="20" Click="mnuMinimize_Click"/>                
+            </Menu>
+        </DockPanel>
+
+        <Button x:Name="btnButtonTest" Style="{StaticResource FlatPic}" Content="Concept" Margin="10" Grid.Column="1" Grid.Row="1"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black" MouseEnter="btnButtonTest_MouseEnter" MouseLeave="btnButtonTest_MouseLeave" Click="btnButtonTest_Click"/>
+        <Button Style="{StaticResource FlatPic}" Content="Concept1" Margin="10" Grid.Column="2" Grid.Row="1"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
+        <Button Style="{StaticResource FlatPic}" Content="Concept1" Margin="10" Grid.Column="3" Grid.Row="1"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
+        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="4" Grid.Row="1"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
         <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="1" Grid.Row="2"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
         <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="2" Grid.Row="2"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
         <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="3" Grid.Row="2"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
-        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="4" Grid.Row="2"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
-        <Button Style="{StaticResource FlatPic}" Content="Big Button" Margin="10" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
+        <Button Style="{StaticResource FlatPic}" Content="Concept2" Margin="10" Grid.Column="4" Grid.Row="2"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
+        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="1" Grid.Row="3"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
+        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="2" Grid.Row="3"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
         <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="3" Grid.Row="3"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
         <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="4" Grid.Row="3"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
+        <Button Style="{StaticResource FlatPic}" Content="Big Button" Margin="10" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
         <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="3" Grid.Row="4"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
+        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="4" Grid.Row="4"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
+        <Button Style="{StaticResource FlatPic}" Content="Concept3" Margin="10" Grid.Column="3" Grid.Row="5"  Background="DeepSkyBlue" Foreground="White" BorderBrush="Black"/>
         <Button  Margin="10" Grid.Column="4" Grid.Row="4" FontSize="10">
             <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <Viewbox DockPanel.Dock="Top">
@@ -49,31 +75,22 @@
                 </Viewbox>
             </DockPanel>
         </Button>
-        <DockPanel Grid.Column="0" Grid.RowSpan="5" Background="Orange">
+        <DockPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="5" Background="#FF3A3A3A">
             <StackPanel>
-                <Button Content="Team WorkFlow" Style="{StaticResource DarkFlatTabButton}"/>
-                <Rectangle Height="3" Fill="White"/>
-                <Button x:Name="btnTesting" Click="btnTesting_Click" Width="125" Background="SlateGray" Foreground="White">
-                    <DockPanel  Width="120">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Image Height="20" Width="20" Source="Email.jpg" HorizontalAlignment="Left" Grid.Column="0"/>
-                            <TextBlock Text="Testing" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1"/>
-                            <Image Height="20" Width="20" Source="Email.jpg"  Grid.Column="2"/>
-                        </Grid>
-                        
-                    </DockPanel>                    
-                </Button>
-                <Rectangle Height="3" Fill="White"/>
-                <local:ImageButton x:Name="imgbutton" NormalImage="Email.jpg" />
-                
+                <Button Content="Team WorkFlow" Style="{StaticResource DarkFlatTabButton}" Visibility="Collapsed"/>
+                <Rectangle x:Name="seperator1" Height="3" Fill="#FF606060"/>
+                <local:ImageButton x:Name="imgbutton" Style="{StaticResource DarkFlatTabButtonT2}" NormalImage="Email.jpg" SecondImage="Exit1.png" TxtBlockValue="Email Notifications" Click="btnTesting_Click" MouseEnter="imgbutton_MouseEnter" MouseLeave="imgbutton_MouseLeave"/>
+                <Rectangle x:Name="seperator2" Height="3" Fill="#FF606060"/>
+                <local:ImageButton Style="{StaticResource DarkFlatTabButtonT2}" TxtBlockValue="" Click="btnTesting_Click" MouseEnter="ImageButton_MouseEnter_2" MouseLeave="ImageButton_MouseLeave_2"/>
+                <Rectangle x:Name="seperator3" Height="3" Fill="#FF606060"/>
+                <local:ImageButton Style="{StaticResource DarkFlatTabButtonT2}" TxtBlockValue="Email Notifications" MouseEnter="ImageButton_MouseEnter_1" MouseLeave="ImageButton_MouseLeave_1"/>
+                <Rectangle x:Name="seperator4" Height="3" Fill="#FF606060"/>
+                <local:ImageButton x:Name="imgBtn4" Style="{StaticResource DarkFlatTabButtonT2}" TxtBlockValue="Email Notifications" MouseEnter="ImageButton_MouseEnter" MouseLeave="ImageButton_MouseLeave" MouseDown="imgBtn4_MouseDown" MouseUp="imgBtn4_MouseUp" MouseLeftButtonDown="imgBtn4_MouseDown" MouseLeftButtonUp="imgBtn4_MouseUp"/>
+                <Rectangle x:Name="seperator5" Height="3" Fill="#FF606060"/>
+                <Button Content="Button" Width="75" Background="#FF555555"/>
 
             </StackPanel>
-            
+
         </DockPanel>
 
     </Grid>

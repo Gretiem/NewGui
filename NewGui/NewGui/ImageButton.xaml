@@ -7,40 +7,34 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              DataContext="{Binding RelativeSource={RelativeSource Self}}">
-    <Button Name="button" Click="button_Click" Width="50" Height="50">
+    <Button Name="button" Click="button_Click" Height="auto" Width="auto">
         <Button.Template>
             <ControlTemplate TargetType="{x:Type Button}">
                 <Border Name="buttonBorder">
-                    <Border.Effect>
-                        <DropShadowEffect Opacity="0.0" />
-                    </Border.Effect>
                     <Border.Child>
-                        <Image Name="img" Source="{Binding NormalImage}"/>
+                        <DockPanel Height="30" MinWidth="80" HorizontalAlignment="Left">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="5"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Viewbox StretchDirection="Both" Height="20" Width="20"  HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1">
+                                    <Image Name="img"  Source="{Binding NormalImage}"/>
+                                </Viewbox>
+                                <TextBlock Text="{Binding TxtBlockValue}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2"/>
+                                <Viewbox StretchDirection="Both" Height="20" Width="20"  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="4">
+                                    <Image Source="{Binding SecondImage}"/>
+                                </Viewbox>
+                            </Grid>
+                        </DockPanel>
                     </Border.Child>
                 </Border>
                 <ControlTemplate.Triggers>
                     <Trigger Property="IsMouseOver" Value="true">
-                        <Setter TargetName="buttonBorder" Property="Effect">
-                            <Setter.Value>
-                                <DropShadowEffect Opacity="0.8" />
-                            </Setter.Value>
-                        </Setter>
-                    </Trigger>
-                    <Trigger Property="IsMouseCaptured" Value="true">
-                        <Setter TargetName="buttonBorder" Property="Effect">
-                            <Setter.Value>
-                                <DropShadowEffect Opacity="0.8" Direction="135"  
-                             ShadowDepth="3" BlurRadius="1" />
-                            </Setter.Value>
-                        </Setter>
-                    </Trigger>
-                    <Trigger Property="IsEnabled" Value="false">
-                        <Setter TargetName="img" Property="Source" Value="{Binding DisabledImage}"/>
-                        <Setter TargetName="buttonBorder" Property="Effect">
-                            <Setter.Value>
-                                <DropShadowEffect Opacity="0.0"/>
-                            </Setter.Value>
-                        </Setter>
+                        <Setter TargetName="buttonBorder" Property="BorderBrush" Value="Blue"/>
                     </Trigger>
                 </ControlTemplate.Triggers>
             </ControlTemplate>

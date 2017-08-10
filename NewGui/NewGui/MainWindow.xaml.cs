@@ -26,6 +26,42 @@ namespace NewGui
             InitializeComponent();
         }
 
+        #region TopMenuBar
+
+        Boolean isMaximized;
+        private void mnuExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void mnuMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void mnuMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            if (isMaximized != true)
+            {
+                this.WindowState = WindowState.Maximized;
+                isMaximized = true;
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+                isMaximized = false;
+            }
+
+            
+            
+        }
+
+        private void lblTitleBarCenter_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
+        #endregion
+
         private void btnButtonTest_MouseEnter(object sender, MouseEventArgs e)
         {
             //btnButtonTest.Background = Brushes.SkyBlue;
@@ -58,6 +94,74 @@ namespace NewGui
         {
             MessageBox.Show("test");
         }
+
+        private void ImageButton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            seperator4.Fill = Brushes.Orange;
+            seperator5.Fill = Brushes.Orange;
+        }
+
+        private void ImageButton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            BrushConverter bc = new BrushConverter();
+            seperator4.Fill = (Brush)bc.ConvertFrom("#FF606060");            
+            seperator5.Fill = (Brush)bc.ConvertFrom("#FF606060");
+        }
+
+        private void ImageButton_MouseEnter_1(object sender, MouseEventArgs e)
+        {
+            seperator4.Fill = Brushes.Orange;
+            seperator3.Fill = Brushes.Orange;
+        }
+
+        private void ImageButton_MouseLeave_1(object sender, MouseEventArgs e)
+        {
+            BrushConverter bc = new BrushConverter();
+            seperator4.Fill = (Brush)bc.ConvertFrom("#FF606060");
+            seperator3.Fill = (Brush)bc.ConvertFrom("#FF606060");
+        }
+
+        private void ImageButton_MouseEnter_2(object sender, MouseEventArgs e)
+        {
+            seperator3.Fill = Brushes.Orange;
+            seperator2.Fill = Brushes.Orange;
+        }
+
+        private void ImageButton_MouseLeave_2(object sender, MouseEventArgs e)
+        {
+            BrushConverter bc = new BrushConverter();
+            seperator3.Fill = (Brush)bc.ConvertFrom("#FF606060");
+            seperator2.Fill = (Brush)bc.ConvertFrom("#FF606060");
+        }
+
+
+
+        private void imgbutton_MouseEnter(object sender, MouseEventArgs e)
+        {
+            seperator2.Fill = Brushes.Orange;
+            seperator1.Fill = Brushes.Orange;
+        }
+
+        private void imgbutton_MouseLeave(object sender, MouseEventArgs e)
+        {
+            BrushConverter bc = new BrushConverter();
+            seperator2.Fill = (Brush)bc.ConvertFrom("#FF606060");
+            seperator1.Fill = (Brush)bc.ConvertFrom("#FF606060");
+        }
+
+        private void imgBtn4_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            BrushConverter bc = new BrushConverter();
+            imgBtn4.Background = (Brush)bc.ConvertFrom("#FF555555");
+        }
+
+        private void imgBtn4_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            BrushConverter bc = new BrushConverter();
+            imgBtn4.Background = (Brush)bc.ConvertFrom("#FF3A3A3A");
+        }
+
+        
     }
 
 
