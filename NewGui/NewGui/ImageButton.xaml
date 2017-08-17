@@ -12,7 +12,7 @@
             <ControlTemplate TargetType="{x:Type Button}">
                 <Border Name="buttonBorder">
                     <Border.Child>
-                        <DockPanel Height="30" MinWidth="80" HorizontalAlignment="Left">
+                        <DockPanel Height="30" MinWidth="80" HorizontalAlignment="Left" Background="Transparent">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="5"/>
@@ -29,7 +29,7 @@
                                     <Image Source="{Binding SecondImage}"/>
                                 </Viewbox>
                             </Grid>
-                        </DockPanel>
+                        </DockPanel>                        
                     </Border.Child>
                 </Border>
                 <ControlTemplate.Triggers>

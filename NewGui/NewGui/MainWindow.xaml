@@ -87,11 +87,11 @@
                 <Rectangle x:Name="seperator4" Height="3" Fill="#FF606060"/>
                 <local:ImageButton x:Name="imgBtn4" Style="{StaticResource DarkFlatTabButtonT2}" TxtBlockValue="Email Notifications" MouseEnter="ImageButton_MouseEnter" MouseLeave="ImageButton_MouseLeave" MouseDown="imgBtn4_MouseDown" MouseUp="imgBtn4_MouseUp" MouseLeftButtonDown="imgBtn4_MouseDown" MouseLeftButtonUp="imgBtn4_MouseUp"/>
                 <Rectangle x:Name="seperator5" Height="3" Fill="#FF606060"/>
-                <Button Content="Button" Width="75" Background="#FF555555"/>
 
             </StackPanel>
 
         </DockPanel>
+        
 
     </Grid>
 </Window>
